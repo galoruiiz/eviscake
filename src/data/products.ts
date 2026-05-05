@@ -3,7 +3,7 @@
 // modificar o quitar productos del catálogo.
 // ============================================================
 
-export type Category = "Tortas" | "Cupcakes" | "Postres" | "Especiales";
+export type Category = "Tortas" | "Cupcakes" | "Postres" | "Especiales" | "Sin TACC";
 
 export interface Product {
   id: number;
