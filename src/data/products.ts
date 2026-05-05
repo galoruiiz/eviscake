@@ -38,12 +38,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 3,
-    name: "Cupcakes de Vainilla",
-    description: "Esponjosos muffins de vainilla con frosting de mantequilla y chispas de colores. Docena.",
-    price: 3200,
-    image: "https://images.unsplash.com/photo-1519869325930-281384150729?w=600&q=80",
+    name: "Budines Personalizados",
+    description: "Esponjosos budines de vainilla con frosting de limon, semillas de amapola y chispas de colores.",
+    price: 6000,
+    image: "https://i.imgur.com/LKOKNY6.jpeg",
     category: "Cupcakes",
-    tag: "Popular",
+    tag: "Nuevo",
     available: true,
   },
   {
