@@ -151,7 +151,7 @@ export const PRODUCTS: Product[] = [
     available: true,
   },
   {
-    id: 14,
+    id: 15,
     name: "Alfajores de Maicena",
     description: "Maizena, dulce de leche y coco rayado. Por Docena.",
     price: 4000,
