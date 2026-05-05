@@ -140,6 +140,15 @@ export const PRODUCTS: Product[] = [
     category: "Tortas",
     available: true,
   },
+  {
+    id: 14,
+    name: "Chipa",
+    description: "Fecula de mandioca, extra queso!! Por unidad.",
+    price: 11000,
+    image: "https://i.imgur.com/yaulWOh.jpeg",
+    category: "Sin TACC",
+    available: true,
+  },
 ];
 
 // ============================================================
@@ -151,4 +160,5 @@ export const CATEGORIES: ("Todas" | Category)[] = [
   "Cupcakes",
   "Postres",
   "Especiales",
+  "Sin TACC"
 ];
