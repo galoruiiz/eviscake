@@ -78,7 +78,7 @@ export default function Hero() {
             {/* Main image */}
             <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl rotate-3">
               <img
-                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700&q=80"
+                src="https://i.imgur.com/yHi4Sbo.jpeg"
                 alt="Torta artesanal"
                 className="w-full h-full object-cover"
               />
@@ -94,7 +94,7 @@ export default function Hero() {
             {/* Floating card 2 */}
             <div className="absolute -top-8 -right-10 w-32 h-32 rounded-2xl overflow-hidden shadow-xl rotate-6 border-4 border-white">
               <img
-                src="https://images.unsplash.com/photo-1562777717-dc6984f65a63?w=300&q=80"
+                src="https://i.imgur.com/dzB10ya.jpeg"
                 alt="Torta floral"
                 className="w-full h-full object-cover"
               />
