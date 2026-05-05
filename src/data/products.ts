@@ -29,7 +29,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 2,
-    name: "Torta de Matilda",
+    name: "Torta Matilda",
     description: "Tres capas de bizcochuelo de cacao con ganache intenso.",
     price: 7900,
     image: "https://i.imgur.com/e7xxP5w.jpeg",
