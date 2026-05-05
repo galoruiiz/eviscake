@@ -11,7 +11,7 @@ interface HomePageProps {
 
 const FEATURES = [
   { icon: "🌾", title: "Ingredientes naturales", desc: "Sin conservantes ni aditivos artificiales." },
-  { icon: "🎨", title: "Diseño personalizado", desc: "Cada torta es única, creada para vos." },
+  { icon: "🎨", title: "Diseño personalizado", desc: "Cada pedido es único, creado para vos." },
   { icon: "🚚", title: "Entrega a domicilio", desc: "Coordinamos la entrega por WhatsApp." },
   { icon: "💝", title: "Hecho con amor", desc: "Pasión en cada capa y decoración." },
 ];
