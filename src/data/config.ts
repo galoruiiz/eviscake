@@ -29,7 +29,7 @@ export const CONFIG = {
   // --- Sección "Sobre Nosotros" ---
   aboutTitle: "Hecho con amor, desde siempre",
   aboutText:
-    "Somos una pastelería artesanal familiar. Cada torta, cupcake y postre es preparado con ingredientes de primera calidad. Nos especializamos en diseños únicos y personalizados para cumpleaños, casamientos, baby showers y más.",
+    "Somos una pastelería artesanal familiar. Cada pedido es preparado con ingredientes de primera calidad. Nos especializamos en diseños únicos y personalizados para cumpleaños, casamientos, baby showers y más.",
   aboutExtra:
     "¿Tenés una idea especial? Escribinos y lo hacemos realidad juntos 🎂",
 
