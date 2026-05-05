@@ -76,7 +76,6 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="font-bold text-gray-800">WhatsApp</p>
-              <p className="text-gray-400 text-sm">+{CONFIG.whatsappNumber}</p>
               <p className="text-green-500 text-xs font-medium mt-0.5">Tap para escribirnos →</p>
             </div>
           </a>
