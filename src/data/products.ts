@@ -147,6 +147,7 @@ export const PRODUCTS: Product[] = [
     price: 11000,
     image: "https://i.imgur.com/yaulWOh.jpeg",
     category: "Sin TACC",
+    tag: "Nuevo"
     available: true,
   },
 ];
