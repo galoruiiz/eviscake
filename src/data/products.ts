@@ -97,9 +97,9 @@ export const PRODUCTS: Product[] = [
   {
     id: 9,
     name: "Alfajores Artesanales",
-    description: "Rellenos de dulce de leche repostero y bañados en chocolate. Por caja de 6.",
-    price: 2800,
-    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80",
+    description: "Rellenos de dulce de leche repostero y bañados en chocolate (opcional con nueces). Por caja de 6.",
+    price: 8800,
+    image: "https://i.imgur.com/WmurEhL.jpeg",
     category: "Postres",
     available: true,
   },
