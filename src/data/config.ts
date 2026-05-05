@@ -27,12 +27,11 @@ export const CONFIG = {
   logoUrl: "https://i.imgur.com/4y41GFf.png",
 
   // --- Sección "Sobre Nosotros" ---
-  aboutTitle: "Hecho con amor, desde siempre",
   aboutText:
     "Somos una pastelería artesanal familiar. Cada pedido es preparado con ingredientes de primera calidad. Nos especializamos en diseños únicos y personalizados para cumpleaños, casamientos, baby showers y más.",
   aboutExtra:
     "¿Tenés una idea especial? Escribinos y lo hacemos realidad juntos 🎂",
 
   // --- Footer ---
-  footerText: "© 2025 Evi's Cakes · Hecho con ❤️ y mucha harina",
+  footerText: "© 2026 Evis Cakes · Hecho con ❤️ y mucha harina",
 };
