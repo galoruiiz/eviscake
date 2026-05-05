@@ -36,7 +36,7 @@ export default function App() {
         <header className="bg-white border-b border-gray-100 flex items-center justify-center py-4 gap-3">
           <img
             src="https://i.imgur.com/4y41GFf.png"
-            alt="Evi's Cakes – Pastelería Artesanal"
+            alt="Evis Cake – Pastelería Artesanal"
             className="h-14 w-auto drop-shadow-sm"
             onError={(e) => {
               (e.target as HTMLImageElement).style.display = "none";
@@ -47,7 +47,7 @@ export default function App() {
               className="text-xl font-bold text-gray-800 leading-tight"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Evi's Cakes
+              Evis Cake
             </p>
             <p className="text-xs text-pink-400 tracking-widest font-medium uppercase">
               Pastelería Artesanal
