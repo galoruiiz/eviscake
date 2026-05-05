@@ -31,7 +31,7 @@ export const PRODUCTS: Product[] = [
     id: 2,
     name: "Torta Matilda",
     description: "Tres capas de bizcochuelo de cacao con ganache intenso.",
-    price: 7900,
+    price: 29000,
     image: "https://i.imgur.com/e7xxP5w.jpeg",
     category: "Tortas",
     available: true,
@@ -59,7 +59,7 @@ export const PRODUCTS: Product[] = [
     id: 5,
     name: "Cheesecake de Frutos Rojos",
     description: "Base de galletita, relleno cremoso de queso y coulis de berries artesanal.",
-    price: 6500,
+    price: 13000,
     image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=80",
     category: "Postres",
     tag: "Nuevo",
@@ -165,8 +165,8 @@ export const PRODUCTS: Product[] = [
 // ============================================================
 // CATEGORÍAS disponibles (se usan en el filtro de productos)
 // ============================================================
-export const CATEGORIES: ("Todas" | Category)[] = [
-  "Todas",
+export const CATEGORIES: ("Todos" | Category)[] = [
+  "Todos",
   "Tortas",
   "Cupcakes",
   "Postres",
