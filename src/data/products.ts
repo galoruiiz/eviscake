@@ -92,7 +92,7 @@ export const PRODUCTS: Product[] = [
     image: "https://i.imgur.com/3GU2I62.jpeg",
     category: "Especiales",
     tag: "A pedido",
-    available: false,
+    available: true,
   },
   {
     id: 9,
@@ -147,7 +147,7 @@ export const PRODUCTS: Product[] = [
     price: 11000,
     image: "https://i.imgur.com/yaulWOh.jpeg",
     category: "Sin TACC",
-    tag: "Nuevo"
+    tag: "Nuevo",
     available: true,
   },
 ];
