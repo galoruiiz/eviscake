@@ -62,7 +62,7 @@ export default function ProductsPage({ onAdd }: ProductsPageProps) {
             Nuestros Productos 🍰
           </h1>
           <p className="text-gray-400 max-w-xl mx-auto">
-            Encontrá tu postre favorito. Todo hecho a mano con los mejores ingredientes. (¡Atencion todos nuestros productos estan sujetos a cambios segun la personalizacion deseada!) 
+            Encontrá tu postre favorito. Todo hecho a mano con los mejores ingredientes. (¡Atencion, todos nuestros productos estan sujetos a cambios en sus precios segun la personalizacion deseada!) 
           </p>
         </div>
       </div>
