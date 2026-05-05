@@ -1,0 +1,145 @@
+// ============================================================
+// PRODUCTOS – editá libremente este archivo para agregar,
+// modificar o quitar productos del catálogo.
+// ============================================================
+
+export type Category = "Tortas" | "Cupcakes" | "Postres" | "Especiales";
+
+export interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  image: string;       // URL pública de la imagen
+  category: Category;
+  tag?: string;        // Ej: "Nuevo", "Popular", "Sin TACC"
+  available: boolean;  // false = se muestra pero sin botón de agregar
+}
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 1,
+    name: "Torta Red Velvet",
+    description: "Húmedo bizcocho rojo con crema de queso, decorada a mano con flores de fondant.",
+    price: 8500,
+    image: "https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=600&q=80",
+    category: "Tortas",
+    tag: "Popular",
+    available: true,
+  },
+  {
+    id: 2,
+    name: "Torta de Chocolate",
+    description: "Tres capas de bizcochuelo de cacao con ganache intenso y merengue suizo.",
+    price: 7900,
+    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80",
+    category: "Tortas",
+    available: true,
+  },
+  {
+    id: 3,
+    name: "Cupcakes de Vainilla",
+    description: "Esponjosos muffins de vainilla con frosting de mantequilla y chispas de colores. Docena.",
+    price: 3200,
+    image: "https://images.unsplash.com/photo-1519869325930-281384150729?w=600&q=80",
+    category: "Cupcakes",
+    tag: "Popular",
+    available: true,
+  },
+  {
+    id: 4,
+    name: "Cupcakes Red Velvet",
+    description: "Nuestro clásico red velvet en versión individual con crema de queso. Docena.",
+    price: 3600,
+    image: "https://images.unsplash.com/photo-1607478900766-efe13248b125?w=600&q=80",
+    category: "Cupcakes",
+    available: true,
+  },
+  {
+    id: 5,
+    name: "Cheesecake de Frutos Rojos",
+    description: "Base de galletita, relleno cremoso de queso y coulis de berries artesanal.",
+    price: 6500,
+    image: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=80",
+    category: "Postres",
+    tag: "Nuevo",
+    available: true,
+  },
+  {
+    id: 6,
+    name: "Brownie de Nutella",
+    description: "Intenso brownie de chocolate con remolinos de Nutella y nueces. Por unidad.",
+    price: 950,
+    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80",
+    category: "Postres",
+    available: true,
+  },
+  {
+    id: 7,
+    name: "Torta Naked Floral",
+    description: "Torta semidesnuda con flores naturales comestibles y crema batida artesanal.",
+    price: 10500,
+    image: "https://images.unsplash.com/photo-1562777717-dc6984f65a63?w=600&q=80",
+    category: "Especiales",
+    tag: "Especial",
+    available: true,
+  },
+  {
+    id: 8,
+    name: "Torta Personalizada",
+    description: "Diseñamos la torta de tus sueños. Consultanos por WhatsApp para el presupuesto.",
+    price: 0,
+    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80",
+    category: "Especiales",
+    tag: "A pedido",
+    available: false,
+  },
+  {
+    id: 9,
+    name: "Alfajores Artesanales",
+    description: "Rellenos de dulce de leche repostero y bañados en chocolate. Por caja de 6.",
+    price: 2800,
+    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80",
+    category: "Postres",
+    available: true,
+  },
+  {
+    id: 10,
+    name: "Cupcakes de Limón",
+    description: "Livianos y frescos, con crema de mantequilla de limón y ralladura confitada.",
+    price: 3400,
+    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=600&q=80",
+    category: "Cupcakes",
+    tag: "Nuevo",
+    available: true,
+  },
+  {
+    id: 11,
+    name: "Torta de Zanahoria",
+    description: "Clásica torta húmeda de zanahoria con nueces y frosting de queso crema.",
+    price: 7200,
+    image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600&q=80",
+    category: "Tortas",
+    available: true,
+  },
+  {
+    id: 12,
+    name: "Cookie Monster",
+    description: "Mega cookies de vainilla con chips de chocolate y crema de Oreo. Por unidad.",
+    price: 1100,
+    image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80",
+    category: "Postres",
+    available: true,
+  },
+];
+
+// ============================================================
+// CATEGORÍAS disponibles (se usan en el filtro de productos)
+// ============================================================
+export const CATEGORIES: ("Todas" | Category)[] = [
+  "Todas",
+  "Tortas",
+  "Cupcakes",
+  "Postres",
+  "Especiales",
+];
