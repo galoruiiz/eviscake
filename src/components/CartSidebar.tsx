@@ -130,6 +130,9 @@ export default function CartSidebar({
             <p className="text-xs text-gray-400 text-center">
               El precio final se coordina por WhatsApp 🎂
             </p>
+            <p className="text-xs text-gray-400 text-center">
+              Recorda que todos los pedidos se hacen con seña.
+            </p>
             <a
               href={`https://wa.me/${CONFIG.whatsappNumber}?text=${buildWhatsAppMessage()}`}
               target="_blank"
