@@ -23,7 +23,7 @@ export default function Footer() {
             <img
               src={CONFIG.logoUrl}
               alt={CONFIG.businessName}
-              className="h-16 w-auto mx-auto sm:mx-0 mb-4 brightness-0 invert opacity-90"
+              className="h-16 w-auto mx-auto sm:mx-0 mb-4 opacity-90 drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
               }}
