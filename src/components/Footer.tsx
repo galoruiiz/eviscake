@@ -87,9 +87,6 @@ export default function Footer() {
             <p className="text-gray-400 text-sm">
               Pedidos por WhatsApp
             </p>
-            <p className="text-pink-300 text-sm font-semibold mt-1">
-              +{CONFIG.whatsappNumber}
-            </p>
           </div>
         </div>
 
