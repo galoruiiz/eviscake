@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
     image: "https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=600&q=80",
     category: "Tortas",
     tag: "Popular",
-    available: true,
+    available: false,
   },
   {
     id: 2,
