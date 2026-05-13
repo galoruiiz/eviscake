@@ -171,5 +171,5 @@ export const CATEGORIES: ("Todos" | Category)[] = [
   "Cupcakes",
   "Postres",
   "Especiales",
-  "Sin TACC"
+  "Sin TACC" ,
 ];
