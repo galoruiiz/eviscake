@@ -29,7 +29,7 @@ export default function Footer() {
               }}
             />
             <p className="text-gray-400 text-sm leading-relaxed">
-              {CONFIG.aboutTitle}
+              {CONFIG.tagline}
             </p>
           </div>
 
