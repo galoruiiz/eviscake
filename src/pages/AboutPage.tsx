@@ -37,7 +37,7 @@ export default function AboutPage() {
             </h1>
             
           
-          <p className="text-gray-500 text-lg leading-relaxed">{CONFIG.aboutText}</p>
+          <p className="text-gray-400 max-w-xl mx-auto">{CONFIG.aboutText}</p>
         </div>
         {/* Decorative blobs */}
         <div className="absolute top-0 left-0 w-64 h-64 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-20"
