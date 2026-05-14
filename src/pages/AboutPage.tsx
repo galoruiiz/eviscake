@@ -32,13 +32,11 @@ export default function AboutPage() {
           <h1
             className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
-          
-            >
+          >
              Nuestra Historia ⏳​
             </h1>
-            >
-            {CONFIG.aboutTitle}
-          </h1>
+            
+          
           <p className="text-gray-500 text-lg leading-relaxed">{CONFIG.aboutText}</p>
         </div>
         {/* Decorative blobs */}

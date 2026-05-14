@@ -95,7 +95,7 @@ export default function HomePage({ onAdd }: HomePageProps) {
               className="text-3xl font-bold text-gray-800 mb-5 leading-tight"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              {CONFIG.aboutTitle}
+              Nuestra historia
             </h2>
             <p className="text-gray-500 leading-relaxed mb-4">{CONFIG.aboutText}</p>
             <p className="text-pink-500 font-medium italic">{CONFIG.aboutExtra}</p>

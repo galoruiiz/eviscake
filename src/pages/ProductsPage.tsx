@@ -10,14 +10,14 @@ interface ProductsPageProps {
 
 export default function ProductsPage({ onAdd }: ProductsPageProps) {
   const [search, setSearch] = useState("");
-  const [activeCategory, setActiveCategory] = useState<"Todas" | Category>("Todas");
+  const [activeCategory, setActiveCategory] = useState<"Todos" | Category>("Todos");
   const [sortBy, setSortBy] = useState<"default" | "price-asc" | "price-desc">("default");
 
   const filtered = useMemo(() => {
     let result = [...PRODUCTS];
 
     // Category filter
-    if (activeCategory !== "Todas") {
+    if (activeCategory !== "Todos") {
       result = result.filter((p) => p.category === activeCategory);
     }
 
@@ -41,11 +41,11 @@ export default function ProductsPage({ onAdd }: ProductsPageProps) {
 
   const clearFilters = () => {
     setSearch("");
-    setActiveCategory("Todas");
+    setActiveCategory("Todos");
     setSortBy("default");
   };
 
-  const hasFilters = search || activeCategory !== "Todas" || sortBy !== "default";
+  const hasFilters = search || activeCategory !== "Todos" || sortBy !== "default";
 
   return (
     <div className="min-h-screen" style={{ background: "linear-gradient(180deg, #fdf6f0 0%, #f2f9f9 100%)" }}>
@@ -140,7 +140,7 @@ export default function ProductsPage({ onAdd }: ProductsPageProps) {
           {filtered.length === 0
             ? "No se encontraron productos"
             : `${filtered.length} producto${filtered.length !== 1 ? "s" : ""} encontrado${filtered.length !== 1 ? "s" : ""}`}
-          {activeCategory !== "Todas" && ` en ${activeCategory}`}
+          {activeCategory !== "Todos" && ` en ${activeCategory}`}
           {search && ` para "${search}"`}
         </p>
 
