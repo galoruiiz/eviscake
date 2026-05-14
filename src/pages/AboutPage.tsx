@@ -27,7 +27,7 @@ export default function AboutPage() {
       >
         <div className="max-w-3xl mx-auto relative z-10">
           <span className="inline-block bg-white text-pink-500 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 shadow-sm">
-            Nuestra historia
+            Nosotros
           </span>
           <h1
             className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6"
