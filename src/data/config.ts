@@ -28,9 +28,10 @@ export const CONFIG = {
 
   // --- Sección "Sobre Nosotros" ---
   aboutText:
-    "Somos una pastelería artesanal familiar. Cada pedido es preparado con ingredientes de primera calidad. Nos especializamos en diseños únicos y personalizados para cumpleaños, casamientos, baby showers y más.",
+    "Nuestra historia empezó con ganas de endulzar la vida de quienes amamos. En cada torta y en cada detalle trabajamos con la misma idea: que el sabor y el diseño cuenten lo que estás viviendo.\n\nSomos una pastelería artesanal familiar, creada a fuerza de oficio, cariño y un montón de prueba y error hasta lograr la textura perfecta y los acabados que enamoran. Con el paso del tiempo fuimos creciendo, manteniendo lo esencial: ingredientes de primera calidad, diseños personalizados y acompañamiento de principio a fin.\n\nHoy hacemos realidad cumpleaños, casamientos, baby showers y celebraciones importantes, con creatividad, dedicación y mucho amor. Porque para nosotros, cada pedido es una forma de decir ‘felicidades’ con sabor.",
   aboutExtra:
     "¿Tenés una idea especial? Escribinos y lo hacemos realidad juntos 🎂",
+
 
   // --- Footer ---
   footerText: "© 2026 Evis Cakes · Hecho con ❤️ y mucha harina",
