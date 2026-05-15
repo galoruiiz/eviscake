@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MessageCircle, Heart } from "lucide-react";
+import { MessageCircle} from "lucide-react";
 import { CONFIG } from "../data/config";
 
 // Inline IG icon
@@ -93,7 +93,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-500 text-xs">{CONFIG.footerText}</p>
           <p className="text-gray-500 text-xs flex items-center gap-1">
-            Hecho con <Heart size={12} className="text-pink-400 fill-pink-400" /> para endulzar tu día
+            La Plata, Buenos Aires, Argentina
           </p>
         </div>
       </div>
