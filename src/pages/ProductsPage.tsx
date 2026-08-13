@@ -1,27 +1,34 @@
 import { useState, useMemo } from "react";
-import { Search, SlidersHorizontal, X } from "lucide-react";
-import { PRODUCTS, CATEGORIES } from "../data/products";
+import { Search, SlidersHorizontal, X, Loader2 } from "lucide-react";
 import ProductCard from "../components/ProductCard";
-import type { Product, Category } from "../data/products";
+import type { Product } from "../lib/types";
+import { useProducts } from "../hooks/useProducts";
+import { useCategories } from "../hooks/useCategories";
 
 interface ProductsPageProps {
   onAdd: (p: Product) => void;
 }
 
 export default function ProductsPage({ onAdd }: ProductsPageProps) {
+  const { products, loading, error } = useProducts();
+  const { categories } = useCategories();
+
   const [search, setSearch] = useState("");
-  const [activeCategory, setActiveCategory] = useState<"Todos" | Category>("Todos");
+  const [activeCategory, setActiveCategory] = useState("Todos");
   const [sortBy, setSortBy] = useState<"default" | "price-asc" | "price-desc">("default");
 
-  const filtered = useMemo(() => {
-    let result = [...PRODUCTS];
+  const categoryOptions = useMemo(
+    () => ["Todos", ...categories.map((c) => c.name)],
+    [categories]
+  );
 
-    // Category filter
+  const filtered = useMemo(() => {
+    let result = [...products];
+
     if (activeCategory !== "Todos") {
       result = result.filter((p) => p.category === activeCategory);
     }
 
-    // Search filter
     if (search.trim()) {
       const q = search.toLowerCase();
       result = result.filter(
@@ -32,12 +39,11 @@ export default function ProductsPage({ onAdd }: ProductsPageProps) {
       );
     }
 
-    // Sort
     if (sortBy === "price-asc") result.sort((a, b) => a.price - b.price);
     if (sortBy === "price-desc") result.sort((a, b) => b.price - a.price);
 
     return result;
-  }, [search, activeCategory, sortBy]);
+  }, [products, search, activeCategory, sortBy]);
 
   const clearFilters = () => {
     setSearch("");
@@ -62,7 +68,7 @@ export default function ProductsPage({ onAdd }: ProductsPageProps) {
             Nuestros Productos 🍰
           </h1>
           <p className="text-gray-400 max-w-xl mx-auto">
-            Encontrá tu postre favorito. Todo hecho a mano con los mejores ingredientes. 
+            Encontrá tu postre favorito. Todo hecho a mano con los mejores ingredientes.
           </p>
           <p className="text-gray-400 max-w-xl mx-auto">
             ¡Atencion, todos nuestros productos estan sujetos a cambios en sus precios segun la personalizacion deseada!
@@ -120,7 +126,7 @@ export default function ProductsPage({ onAdd }: ProductsPageProps) {
 
         {/* Category pills */}
         <div className="flex flex-wrap gap-2 mb-8">
-          {CATEGORIES.map((cat) => (
+          {categoryOptions.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
@@ -135,33 +141,45 @@ export default function ProductsPage({ onAdd }: ProductsPageProps) {
           ))}
         </div>
 
-        {/* Results count */}
-        <p className="text-sm text-gray-400 mb-6">
-          {filtered.length === 0
-            ? "No se encontraron productos"
-            : `${filtered.length} producto${filtered.length !== 1 ? "s" : ""} encontrado${filtered.length !== 1 ? "s" : ""}`}
-          {activeCategory !== "Todos" && ` en ${activeCategory}`}
-          {search && ` para "${search}"`}
-        </p>
-
-        {/* Grid */}
-        {filtered.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filtered.map((p) => (
-              <ProductCard key={p.id} product={p} onAdd={onAdd} />
-            ))}
+        {loading ? (
+          <div className="flex items-center justify-center py-24 text-gray-400 gap-2">
+            <Loader2 size={20} className="animate-spin" /> Cargando productos…
+          </div>
+        ) : error ? (
+          <div className="text-center py-24">
+            <p className="text-gray-400">No pudimos cargar el catálogo. Probá recargar la página.</p>
           </div>
         ) : (
-          <div className="text-center py-24">
-            <span className="text-6xl">🔍</span>
-            <p className="text-gray-400 mt-4 font-medium">No encontramos lo que buscás</p>
-            <button
-              onClick={clearFilters}
-              className="mt-4 text-pink-400 hover:text-pink-600 text-sm font-semibold"
-            >
-              Ver todos los productos
-            </button>
-          </div>
+          <>
+            {/* Results count */}
+            <p className="text-sm text-gray-400 mb-6">
+              {filtered.length === 0
+                ? "No se encontraron productos"
+                : `${filtered.length} producto${filtered.length !== 1 ? "s" : ""} encontrado${filtered.length !== 1 ? "s" : ""}`}
+              {activeCategory !== "Todos" && ` en ${activeCategory}`}
+              {search && ` para "${search}"`}
+            </p>
+
+            {/* Grid */}
+            {filtered.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filtered.map((p) => (
+                  <ProductCard key={p.id} product={p} onAdd={onAdd} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-24">
+                <span className="text-6xl">🔍</span>
+                <p className="text-gray-400 mt-4 font-medium">No encontramos lo que buscás</p>
+                <button
+                  onClick={clearFilters}
+                  className="mt-4 text-pink-400 hover:text-pink-600 text-sm font-semibold"
+                >
+                  Ver todos los productos
+                </button>
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>

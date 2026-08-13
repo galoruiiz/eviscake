@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ShoppingCart, Check, MessageCircle } from "lucide-react";
-import type { Product } from "../data/products";
+import type { Product } from "../lib/types";
 import { CONFIG } from "../data/config";
 
 interface ProductCardProps {

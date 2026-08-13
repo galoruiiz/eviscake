@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy, Suspense, useState } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Loader2 } from "lucide-react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CartSidebar from "./components/CartSidebar";
@@ -10,7 +11,30 @@ import ContactPage from "./pages/ContactPage";
 import { useCart } from "./hooks/useCart";
 import ScrollToTop from "./components/ScrollToTop";
 
+// El panel admin se carga aparte: los clientes que solo visitan
+// el sitio público nunca descargan este código.
+const AdminApp = lazy(() => import("./admin/AdminApp"));
+
+function AdminFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 text-gray-400 gap-2">
+      <Loader2 size={18} className="animate-spin" /> Cargando…
+    </div>
+  );
+}
+
 export default function App() {
+  return (
+    <BrowserRouter>
+      <AppShell />
+    </BrowserRouter>
+  );
+}
+
+function AppShell() {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith("/admin");
+
   const [cartOpen, setCartOpen] = useState(false);
   const {
     cart,
@@ -28,8 +52,18 @@ export default function App() {
     setCartOpen(true);
   };
 
+  if (isAdminRoute) {
+    return (
+      <Suspense fallback={<AdminFallback />}>
+        <Routes>
+          <Route path="/admin/*" element={<AdminApp />} />
+        </Routes>
+      </Suspense>
+    );
+  }
+
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col font-sans text-gray-800">
         {/* Logo header */}
@@ -84,6 +118,6 @@ export default function App() {
           onClear={clearCart}
         />
       </div>
-    </BrowserRouter>
+    </>
   );
 }

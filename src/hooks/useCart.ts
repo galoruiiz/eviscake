@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import type { Product } from "../data/products";
+import type { Product } from "../lib/types";
 
 export interface CartItem extends Product {
   qty: number;
@@ -20,13 +20,13 @@ export function useCart() {
     });
   }, []);
 
-  const increment = useCallback((id: number) => {
+  const increment = useCallback((id: string) => {
     setCart((prev) =>
       prev.map((i) => (i.id === id ? { ...i, qty: i.qty + 1 } : i))
     );
   }, []);
 
-  const decrement = useCallback((id: number) => {
+  const decrement = useCallback((id: string) => {
     setCart((prev) =>
       prev
         .map((i) => (i.id === id ? { ...i, qty: i.qty - 1 } : i))
@@ -34,7 +34,7 @@ export function useCart() {
     );
   }, []);
 
-  const removeItem = useCallback((id: number) => {
+  const removeItem = useCallback((id: string) => {
     setCart((prev) => prev.filter((i) => i.id !== id));
   }, []);
 

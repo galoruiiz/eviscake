@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import { Loader2 } from "lucide-react";
 import Hero from "../components/Hero";
-import { PRODUCTS } from "../data/products";
 import ProductCard from "../components/ProductCard";
 import { CONFIG } from "../data/config";
-import type { Product } from "../data/products";
+import type { Product } from "../lib/types";
+import { useProducts } from "../hooks/useProducts";
 
 interface HomePageProps {
   onAdd: (p: Product) => void;
@@ -17,7 +18,8 @@ const FEATURES = [
 ];
 
 export default function HomePage({ onAdd }: HomePageProps) {
-  const featured = PRODUCTS.filter((p) => p.tag === "Popular" || p.tag === "Nuevo").slice(0, 3);
+  const { products, loading } = useProducts();
+  const featured = products.filter((p) => p.tag === "Popular" || p.tag === "Nuevo").slice(0, 3);
 
   return (
     <>
@@ -53,11 +55,17 @@ export default function HomePage({ onAdd }: HomePageProps) {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {featured.map((p) => (
-              <ProductCard key={p.id} product={p} onAdd={onAdd} />
-            ))}
-          </div>
+          {loading ? (
+            <div className="flex items-center justify-center py-16 text-gray-400 gap-2">
+              <Loader2 size={20} className="animate-spin" /> Cargando…
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+              {featured.map((p) => (
+                <ProductCard key={p.id} product={p} onAdd={onAdd} />
+              ))}
+            </div>
+          )}
 
           <div className="text-center">
             <Link

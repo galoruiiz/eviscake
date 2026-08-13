@@ -7,9 +7,9 @@ interface CartSidebarProps {
   onClose: () => void;
   cart: CartItem[];
   cartSubtotal: number;
-  onIncrement: (id: number) => void;
-  onDecrement: (id: number) => void;
-  onRemove: (id: number) => void;
+  onIncrement: (id: string) => void;
+  onDecrement: (id: string) => void;
+  onRemove: (id: string) => void;
   onClear: () => void;
 }
 
