@@ -69,7 +69,7 @@ function AppShell() {
         {/* Logo header */}
         <header className="bg-white border-b border-gray-100 flex items-center justify-center py-4 gap-3">
           <img
-            src="https://i.imgur.com/4y41GFf.png"
+            src="/logo.png"
             alt="Evis Cake – Pastelería Artesanal"
             className="h-14 w-auto drop-shadow-sm"
             onError={(e) => {

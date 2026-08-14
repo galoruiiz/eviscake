@@ -53,7 +53,7 @@ export default function Navbar({ cartCount, onCartOpen }: NavbarProps) {
           {/* Logo compacto en nav */}
           <Link to="/" className="flex items-center gap-2 shrink-0">
             <img
-              src={CONFIG.logoUrl}
+              src="/logo.png"
               alt={CONFIG.businessName}
               className="h-10 w-auto drop-shadow-sm"
               onError={(e) => {
