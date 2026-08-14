@@ -1,5 +1,5 @@
 -- ============================================================
--- Evi's Cakes — Schema inicial
+-- Evis Cake — Schema inicial
 -- Correr UNA SOLA VEZ en: Supabase Dashboard → SQL Editor → New query
 -- ============================================================
 

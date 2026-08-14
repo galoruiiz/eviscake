@@ -1,5 +1,5 @@
 -- ============================================================
--- Evi's Cakes — Datos iniciales
+-- Evis Cake — Datos iniciales
 -- Migra el catálogo que hoy está hardcodeado en src/data/products.ts
 -- Correr DESPUÉS de 001_schema.sql
 -- ============================================================

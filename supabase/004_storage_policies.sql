@@ -1,5 +1,5 @@
 -- ============================================================
--- Evi's Cakes — Políticas de storage
+-- Evis Cake — Políticas de storage
 -- Correr DESPUÉS de crear el bucket "product-images" a mano
 -- desde Storage → New bucket (marcado como Public).
 --

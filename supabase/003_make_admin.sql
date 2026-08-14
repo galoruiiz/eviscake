@@ -1,5 +1,5 @@
 -- ============================================================
--- Evi's Cakes — Alta del usuario administrador
+-- Evis Cake — Alta del usuario administrador
 -- Correr DESPUÉS de crear el usuario en:
 --   Supabase Dashboard → Authentication → Users → Add user
 --   (marcá "Auto Confirm User" para que pueda loguearse ya mismo)

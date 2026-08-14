@@ -34,5 +34,5 @@ export const CONFIG = {
 
 
   // --- Footer ---
-  footerText: "© 2026 Evis Cakes · Hecho con ❤️ y mucha harina",
+  footerText: "© 2026 Evis Cake · Hecho con ❤️ y mucha harina",
 };
